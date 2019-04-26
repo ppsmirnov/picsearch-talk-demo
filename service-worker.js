@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/picsearch-talk/precache-manifest.be765e020d71e96e13925a7a6f4bc1c3.js"
+  "/picsearch-talk-demo/precache-manifest.6bbcc537ff4158eb4a219d60fb60b658.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/picsearch-talk/index.html", {
+workbox.routing.registerNavigationRoute("/picsearch-talk-demo/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
