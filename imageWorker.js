@@ -1,7 +1,7 @@
 const MAX_CANVAS_WIDTH = 480;
 const MAX_CANVAS_HEIGHT = 320;
 
-self.onmessage = async function(event) {
+onmessage = async function(event) {
     const {file} = event.data;
     let img = await self.createImageBitmap(file);
 
@@ -10,7 +10,8 @@ self.onmessage = async function(event) {
     let ctx = canvas.getContext('2d');
     ctx.drawImage(img, 0, 0);
 
-    let {width, height} = img.width;
+    let width = img.width;
+    let height = img.height;
 
     // если картинка больше заданных констант, то изменяем её размер
     if (width > height && width > MAX_CANVAS_WIDTH) {
@@ -29,6 +30,6 @@ self.onmessage = async function(event) {
     const blob = await canvas.convertToBlob();
 
     if (blob) {
-        postMessage(blob);
+      postMessage(blob);
     }
   }
