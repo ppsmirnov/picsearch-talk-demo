@@ -1,0 +1,71 @@
+.css-animation-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.css-animation-example__box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    animation: animation-transform infinite 6s linear;
+    font-size: 50px;
+}
+
+.css-animation-example__box--position {
+    position: relative;
+    background: yellowgreen;
+    animation-name: animation-left;
+
+}
+
+strong {
+    color: red;
+}
+
+@keyframes animation-transform {
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-100px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    75% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animation-left {
+    0% {
+        left: 0;
+    }
+
+    25% {
+        left: -100px;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    75% {
+        left: 100px;
+    }
+
+    100% {
+        left: 0;
+    }
+}

@@ -1,0 +1,11 @@
+.js-animation-example__box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: cornflowerblue;
+    font-size: 50px;
+    margin: 30px;
+    will-change: transform;
+}
