@@ -10,8 +10,7 @@ onmessage = async function(event) {
     let ctx = canvas.getContext('2d');
     ctx.drawImage(img, 0, 0);
 
-    let width = img.width;
-    let height = img.height;
+    let {width, height} = img;
 
     // если картинка больше заданных констант, то изменяем её размер
     if (width > height && width > MAX_CANVAS_WIDTH) {
